@@ -1,111 +1,218 @@
 import 'package:flutter/material.dart';
-
+import 'model/post.dart';
+import 'package:my_first/demo/bottom_navigationBar_demo.dart';
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.red
-      ),
-      home: MyHomePage(title: 'zyt_First_flutter_Demo'),
+    // TODO: implement build
+    return MaterialApp(home: Home(),
+
+    theme: ThemeData(
+      highlightColor: Color.fromRGBO(255, 255, 255, .5),
+      splashColor: Colors.white,
+      // splashFactory: ,
+      primaryColor: Colors.green[100]
+      )
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class Home extends StatelessWidget{
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
+  // Widget _listItemBuild(BuildContext context,int index ){
+  //   // return Text(posts[index].title); 
 
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
+  //   return Container (
+  //     color: Colors.red,
+  //     margin: EdgeInsets.all(8.0),
+  //     child: Column(
+  //       children: <Widget>[
+  //         Text(posts[index].title,style: 
+  //         Theme.of(context).textTheme.title
+  //         ),
+  //         Text(posts[index].details,
+  //         style: Theme.of(context).textTheme.subhead
+  //         ),
+  //         Text(posts[index].price,
+  //         style: Theme.of(context).textTheme.subtitle
+  //         ),
+  //       ],
+  //     ),
+      
+  //   );
+  // }
   @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
+  Widget build(BuildContext context ) {
+    // TODO: implement build
+    return 
+    // DefaultTabController(
+    //    length: 4,
+    //    child: Scaffold(
+    //      appBar: AppBar(
+    //        bottom: TabBar(
+    //         //  tabs: myTabs,
+    //         tabs: <Widget>[
+    //         Tab(icon: Icon(Icons.local_activity)),
+    //         Tab(icon: Icon(Icons.change_history)),
+    //         Tab(icon: Icon(Icons.label)),
+    //         Tab(icon: Icon(Icons.receipt)),
+    //         ],
+    //        ),
+    //      ),
+    //      body: TabBarView(
+    //        children: <Widget>[
+    //          Icon(Icons.label,size: 128 , color: Colors.black),
+    //          Icon(Icons.label,size: 128 , color: Colors.black),
+    //          Icon(Icons.label,size: 128 , color: Colors.black),
+    //          Icon(Icons.label,size: 128 , color: Colors.black),
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
+    //        ],
+    //       //  children: myTabs.map((Tab tab) {
+    //       //    return Center(child: Text(tab.text));
+    //       //  }).toList(),
+    //      ),
+    //    ),
+    //  );
+    DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        bottomNavigationBar: BottomnavigationBardemo(),
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+          bottom: TabBar(
+            indicatorColor: Colors.yellow,
+            indicatorSize: TabBarIndicatorSize.label,
+            indicatorWeight: 1,
+            indicatorPadding: EdgeInsets.zero,
+labelColor: Colors.red,
+          tabs: <Widget>[
+            Tab(icon: Icon(Icons.local_activity),text: '我是'),
+            Tab(icon: Icon(Icons.change_history),text: '还是'),
+            Tab(icon: Icon(Icons.label),text: '不是'),
+            Tab(icon: Icon(Icons.receipt),text: '都是'),
           ],
         ),
+        actions: <Widget>[
+          IconButton(
+          icon: Icon(Icons.search),
+          tooltip: 'search',
+          onPressed: ()=>debugPrint('search is selected'),
+        ),      
+         IconButton(
+          icon: Icon(Icons.search),
+          tooltip: 'search',
+          onPressed: ()=>debugPrint('searchone is selected'),
+        ),
+        ],
+        title: Text('zyt_learn_title'),
+        elevation: 4.0,
+
+
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // body: helloworld(),
+      drawer: drawerDemo(),
+      endDrawer: Text('this is enddrawer'),
+               body: TabBarView(
+           children: <Widget>[
+             Icon(Icons.label,size: 128 , color: Colors.black),
+             Icon(Icons.label,size: 128 , color: Colors.black),
+             Icon(Icons.label,size: 128 , color: Colors.black),
+             Icon(Icons.label,size: 128 , color: Colors.black),
+
+           ],
+          //           children: myTabs.map((Tab tab) {
+          //    return Center(child: Text(tab.text));
+          //  }).toList(),
+               ),
+    ),
     );
   }
+}
+
+class drawerDemo extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    
+    return Drawer(
+      elevation: 8,
+        semanticLabel: 'data',
+        child: ListView(
+          shrinkWrap: true,
+          primary: true,
+          reverse: false,
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+accountName: Text('zyt',style: TextStyle(fontWeight: FontWeight.bold )),
+accountEmail: Text('1054561595@qq.com'),
+// currentAccountPicture: Icon(Icons.monetization_on),
+decoration: BoxDecoration(
+  color: Colors.yellow,
+  image: DecorationImage(
+image:  NetworkImage('https://resources.ninghao.org/images/childhood-in-a-picture.jpg'),
+fit: BoxFit.cover,
+colorFilter: ColorFilter.mode(Colors.red.withOpacity(.5), BlendMode.hardLight),
+  ),
+),
+currentAccountPicture: CircleAvatar(
+  backgroundImage: NetworkImage('https://resources.ninghao.org/images/wanghao.jpg'),
+),
+            ),
+            // DrawerHeader(
+            //   child: Text('this is the one'.toUpperCase()),
+
+            //   decoration: BoxDecoration(
+            //     color: Colors.white,
+            //   ),
+            // ),
+            ListTile(
+              title: Text('thisistheone',textAlign: TextAlign.right,),
+              trailing: Icon(Icons.message,color: Colors.red),
+              // onTap: () => debugPrint('this is selel'),
+              onTap: () => Navigator.pop(context),
+            ),
+            ListTile(
+              title: Text('thisisthetwo',textAlign: TextAlign.right,),
+              trailing: Icon(Icons.mail,color: Colors.red),
+                            onTap: () => Navigator.pop(context),
+            ),
+            ListTile(
+              title: Text('thisisthethree',textAlign: TextAlign.right,),
+              trailing: Icon(Icons.edit,color: Colors.red),
+                            onTap: () => Navigator.pop(context),
+            ),
+            ListTile(
+              title: Text('thisisthefour',textAlign: TextAlign.right,),
+              trailing: Icon(Icons.library_add,color: Colors.red),
+                            onTap: () => Navigator.pop(context),
+            ),
+          ],
+
+        ),
+    );
+  }
+}
+
+
+class helloworld extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Center(
+      child: Text
+      ('hello world',
+      textDirection: TextDirection.ltr,
+      style: TextStyle(
+        fontSize: 40.0,
+        // fontStyle: FontStyle.normal,
+        fontWeight: FontWeight.bold,
+        color: Colors.red
+        )
+      ),
+    );
+  }
+ 
 }
