@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'model/post.dart';
 import 'package:my_first/demo/bottom_navigationBar_demo.dart';
+import 'package:my_first/demo/basicDemo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -115,7 +116,8 @@ labelColor: Colors.red,
       endDrawer: Text('this is enddrawer'),
                body: TabBarView(
            children: <Widget>[
-             Icon(Icons.label,size: 128 , color: Colors.black),
+             basicDemo(),
+            //  Icon(Icons.label,size: 128 , color: Colors.black),
              Icon(Icons.label,size: 128 , color: Colors.black),
              Icon(Icons.label,size: 128 , color: Colors.black),
              Icon(Icons.label,size: 128 , color: Colors.black),
