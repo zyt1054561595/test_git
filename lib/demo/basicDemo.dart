@@ -24,6 +24,7 @@ class containerBorderStyle extends StatelessWidget{
         // repeat: ImageRepeat.repeatY,
 colorFilter: ColorFilter.mode(Colors.indigoAccent[400].withOpacity(0.5), BlendMode.hardLight),
         fit: BoxFit.cover,
+        
         // image: AssetImage(''),
         ),
       ),

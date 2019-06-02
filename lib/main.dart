@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'model/post.dart';
 import 'package:my_first/demo/bottom_navigationBar_demo.dart';
 import 'package:my_first/demo/basicDemo.dart';
+import 'demo/layout_demo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -120,8 +121,8 @@ labelColor: Colors.red,
             //  Icon(Icons.label,size: 128 , color: Colors.black),
              Icon(Icons.label,size: 128 , color: Colors.black),
              Icon(Icons.label,size: 128 , color: Colors.black),
-             Icon(Icons.label,size: 128 , color: Colors.black),
-
+            //  Icon(Icons.label,size: 128 , color: Colors.black),
+layoutDemo(),
            ],
           //           children: myTabs.map((Tab tab) {
           //    return Center(child: Text(tab.text));
