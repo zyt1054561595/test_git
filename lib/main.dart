@@ -4,14 +4,16 @@ import 'package:my_first/demo/bottom_navigationBar_demo.dart';
 import 'package:my_first/demo/basicDemo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/ViewDemo.dart';
+import 'demo/SliverDemo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(home: Home(),
-
+    return MaterialApp(
+      // home: Home(),
+home: slierDemo(),
     theme: ThemeData(
       highlightColor: Color.fromRGBO(255, 255, 255, .5),
       splashColor: Colors.white,
