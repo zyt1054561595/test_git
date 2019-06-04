@@ -8,7 +8,7 @@ class layoutDemo extends StatelessWidget{
     // TODO: implement build
     return Container(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center
+        mainAxisAlignment: MainAxisAlignment.center,
         // crossAxisAlignment: CrossAxisAlignment.end,
       children: <Widget>[
         // stackDemo(),

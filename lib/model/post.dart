@@ -21,49 +21,49 @@ final List<Post> posts = [
   Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: '',
+    icon: 'https://resources.ninghao.org/images/candy-shop.jpg',
     price: '土生土长的人',
     exPress: '100.00'
   ),
    Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: 'package:my_first/asset/1024.png',
+    icon: 'https://resources.ninghao.org/images/the-old-fashioned.png',
     price: '土生土长的人',
     exPress: '100.00'
   ),
    Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: 'package:my_first/asset/1024.png',
+    icon: 'https://resources.ninghao.org/images/candy-shop.jpg',
     price: '土生土长的人',
     exPress: '100.00'
   ),
    Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: 'package:my_first/asset/1024.png',
+    icon: 'https://resources.ninghao.org/images/the-old-fashioned.png',
     price: '土生土长的人',
     exPress: '100.00'
    ),
     Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: 'package:my_first/asset/1024.png',
+    icon: 'https://resources.ninghao.org/images/candy-shop.jpg',
     price: '土生土长的人',
     exPress: '100.00'
   ),
   Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: 'package:my_first/asset/1024.png',
+    icon: 'https://resources.ninghao.org/images/candy-shop.jpg',
     price: '土生土长的人',
     exPress: '100.00'
   ), 
   Post(
     title: '我的老家',
     details: '住在这个屯',
-    icon: 'package:my_first/asset/1024.png',
+    icon: 'https://resources.ninghao.org/images/candy-shop.jpg',
     price: '土生土长的人',
     exPress: '100.00'
   )
