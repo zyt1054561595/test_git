@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_first/demo/postshowDemo.dart';
 import 'package:my_first/model/post.dart';
+
+
+
+
 
 class slierDemo extends StatelessWidget{
   @override
@@ -29,8 +34,8 @@ fontWeight: FontWeight.w100,
           SliverSafeArea(
             sliver: SliverPadding(
 padding: EdgeInsets.all(8.0),
+sliver: sliverListDemo(),
 // sliver: sliverGridDemo(),
-sliver: sliverGridDemo(),
             ),
           ),
         ],
@@ -86,6 +91,21 @@ Positioned(
     ],
   ),
 ),
+Positioned.fill(
+  child: Material(
+    color: Colors.transparent,
+    child: InkWell(
+      splashColor: Colors.white.withOpacity(0.5),
+      highlightColor: Colors.white.withOpacity(0.1),
+onTap: (){
+  debugPrint('click');
+  Navigator.of(context).push(
+    MaterialPageRoute(builder:(context) => PostShow(post:posts[index])),
+  );
+},
+    ),
+  ),
+)
       ],
     ),
   ),
@@ -133,3 +153,4 @@ class sliverBuildDemo extends StatelessWidget{
     return null;
   }
 }
+

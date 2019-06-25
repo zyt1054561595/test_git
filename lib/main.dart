@@ -5,6 +5,9 @@ import 'package:my_first/demo/basicDemo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/ViewDemo.dart';
 import 'demo/SliverDemo.dart';
+import 'demo/navigationDemo.dart';
+import 'demo/formdome.dart';
+import 'package:my_first/demo/material_components.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -13,12 +16,21 @@ class MyApp extends  StatelessWidget{
     // TODO: implement build
     return MaterialApp(
       // home: Home(),
-home: slierDemo(),
+// home: slierDemo(),
+// home: navigationDemo(),
+initialRoute: '/mdc',
+routes: {
+'/':(context) => slierDemo(),
+  '/data3':(context) => Page(title: 'data3'),
+  '/form':(context) => formDome(),
+  '/mdc':(context) => MaterialCompnents(),
+},
     theme: ThemeData(
       highlightColor: Color.fromRGBO(255, 255, 255, .5),
       splashColor: Colors.white,
       // splashFactory: ,
-      primaryColor: Colors.green[100]
+      primaryColor: Colors.yellow,
+      accentColor: Color.fromRGBO(3, 54, 255, 1.0),
       )
     );
   }
