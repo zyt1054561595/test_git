@@ -8,6 +8,8 @@ import 'demo/SliverDemo.dart';
 import 'demo/navigationDemo.dart';
 import 'demo/formdome.dart';
 import 'package:my_first/demo/material_components.dart';
+import 'demo/state_management.dart';
+import 'demo/streamDemo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -18,12 +20,14 @@ class MyApp extends  StatelessWidget{
       // home: Home(),
 // home: slierDemo(),
 // home: navigationDemo(),
-initialRoute: '/mdc',
+initialRoute: '/streamDemo',
 routes: {
 '/':(context) => slierDemo(),
   '/data3':(context) => Page(title: 'data3'),
   '/form':(context) => formDome(),
   '/mdc':(context) => MaterialCompnents(),
+  '/state_management':(context) => statemanagement(),
+  '/streamDemo': (context) => streamDemo(),
 },
     theme: ThemeData(
       highlightColor: Color.fromRGBO(255, 255, 255, .5),
