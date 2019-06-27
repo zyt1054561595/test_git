@@ -10,6 +10,7 @@ import 'demo/formdome.dart';
 import 'package:my_first/demo/material_components.dart';
 import 'demo/state_management.dart';
 import 'demo/streamDemo.dart';
+import 'package:my_first/demo/rxDart/rxDartDemo.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -20,7 +21,7 @@ class MyApp extends  StatelessWidget{
       // home: Home(),
 // home: slierDemo(),
 // home: navigationDemo(),
-initialRoute: '/streamDemo',
+initialRoute: '/rxDartDemo',
 routes: {
 '/':(context) => slierDemo(),
   '/data3':(context) => Page(title: 'data3'),
@@ -28,6 +29,7 @@ routes: {
   '/mdc':(context) => MaterialCompnents(),
   '/state_management':(context) => statemanagement(),
   '/streamDemo': (context) => streamDemo(),
+'/rxDartDemo':(context) => rxDartDemo(),
 },
     theme: ThemeData(
       highlightColor: Color.fromRGBO(255, 255, 255, .5),
