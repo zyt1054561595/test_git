@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first/demo/animation/animation.dart';
 import 'package:my_first/demo/http/httpDemo.dart';
 import 'model/post.dart';
 import 'package:my_first/demo/bottom_navigationBar_demo.dart';
@@ -14,6 +15,7 @@ import 'demo/streamDemo.dart';
 import 'package:my_first/demo/rxDart/rxDartDemo.dart';
 import 'demo/bloc/blocDemo.dart';
 import 'demo/http/httpDemo.dart';
+import 'demo/animation/animation.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends  StatelessWidget{
@@ -24,7 +26,7 @@ class MyApp extends  StatelessWidget{
       // home: Home(),
 // home: slierDemo(),
 // home: navigationDemo(),
-initialRoute: '/httpDemo',
+initialRoute: '/animationDemo',
 routes: {
 '/':(context) => slierDemo(),
   '/data3':(context) => Page(title: 'data3'),
@@ -35,6 +37,7 @@ routes: {
 '/rxDartDemo':(context) => rxDartDemo(),
 '/blocDemo':(context) => blocDemo(),
 '/httpDemo': (context) => httpDemo(),
+'/animationDemo':(context) => animationDemo(),
 },
     theme: ThemeData(
       highlightColor: Color.fromRGBO(255, 255, 255, .5),
