@@ -64,20 +64,20 @@ class _httpHomeDemoState extends State<httpHomeDemo> {
 
   Future<List<Post>> fetchPost() async {
     final resoorce = await http.get('https://resources.ninghao.net/demo/posts.json');
-    // if (resoorce.statusCode == 200) {
-    //     final resourceBody = json.decode(resoorce.body);
-    //     print('${resoorce}');
-    //     print('${resourceBody}');
-    //     List<Post>  posts = resourceBody['posts']
-    //     .map<Post>((item) => Post.fromJson(item))
-    //     .toList();
+    if (resoorce.statusCode == 200) {
+        final resourceBody = json.decode(resoorce.body);
+        print('${resoorce}');
+        print('${resourceBody}');
+        List<Post>  posts = resourceBody['posts']
+        .map<Post>((item) => Post.fromJson(item))
+        .toList();
 
-    //     return posts;
-    // } else {
-    //   throw Exception('fail to fetch posts');
-    // }
-    print('${resoorce.statusCode}');
-        print('${resoorce.body}');
+        return posts;
+    } else {
+      throw Exception('fail to fetch posts');
+    }
+    // print('${resoorce.statusCode}');
+    //     print('${resoorce.body}');
 // final resourceEncode = resoorce.
         // final postModel = Post.fromJson(resource);
     // final postResource = await http.post('');
